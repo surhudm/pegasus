@@ -26,7 +26,7 @@ Please follow the instructions carefully, most importantly **setup a passphrase 
 Enter file in which to save the key (/home/yourusername/.ssh/id_rsa):
 Enter passphrase (empty for no passphrase):
 ```
-If all goes well, there will be two ssh keys created in the `.ssh` directory. With the default options, you will get a private key `.ssh/id_rsa` and a public key `.ssh/id_rsa.pub` in your home directory.
+For the first question, if you do not have previous keys, you can just press enter. If you have previous ssh key, and would like to create a new one, you can give filename as `/home/yourusername/.ssh/id_rsanew` for example. Just make sure it is in the `.ssh` directory. If all goes well, there will be two ssh keys created in the `.ssh` directory. With the default options, you will get a private key `.ssh/id_rsa` and a public key `.ssh/id_rsa.pub` in your home directory.
 
 Remember that **the private key is not supposed to be shared with anyone**, while the public key can be made accessible to the whole world. Think about the public key as follows: anyone can use your public key to lock (encrypt) a message to be sent to you. Once encrypted the message can only be decrypted by the you with the help of the private key and its corresponding passphrase. Hence it is important to protect the private key and its passphrase.
 

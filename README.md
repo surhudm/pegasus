@@ -131,11 +131,11 @@ There are multiple clients such as `PuTTY` or `termius` which will enable a simi
 
 First copy the ssh key identity to the gateway account by running the following command:
 ```
-ssh-copy-id your_username@gw.iucaa.in
+ssh-copy-id your_username@gw-pune.iucaa.in
 ```
 It will ask for the passphrase of the gw account. Once the key is installed, you can run:
 ```
-ssh -A your_username@gw.iucaa.in
+ssh -A your_username@gw-pune.iucaa.in
 ```
 This should allow access to the pegasus account if you have installed your ssh key on pegasus using methods discussed in the previous section already. In case you would like to install the ssh key by using the gw account itself. Please see the following section on tunnels.
 
@@ -144,7 +144,7 @@ This should allow access to the pegasus account if you have installed your ssh k
 SSH tunnels can also be created from the gateway account to access the pegasus cluster for file transfers. For example to set up a ssh tunnel for scp'ing a file.
 
 ```
-ssh -N -L 12345:pegasus.ac.iucaa.in:22 your_username@gw.iucaa.in
+ssh -N -L 12345:pegasus.ac.iucaa.in:22 your_username@gw-pune.iucaa.in
 ```
 
 After the authentication is complete (using your gw password), then press `Ctrl-Z` and type `bg` to put the job in the background. A ssh tunnel will be established between your port 12345 and port 22 on the pegasus login nodes. Any data sent on your port 12345 gets sent to port 22 on pegasus from now on. If you have not yet installed the SSH key on pegasus then run
